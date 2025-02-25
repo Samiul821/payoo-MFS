@@ -22,34 +22,39 @@
         </header>
 
         <!-- login section -->
-        <div class="hero">
+        <div>
             <div class="hero-content flex-col lg:flex-row-reverse">
-              
+
                 <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
-                                <span class="label-text">Mobile Number</span>
+                                <span class="label-text">Acount Number</span>
                             </label>
-                            <input type="number" placeholder="Enter your number" class="input input-bordered" required />
+                            <input value="01330624539" id="acount-number" type="number" placeholder="Enter your number" class="input input-bordered"
+                                required />
                         </div>
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">4 Digit Pin</span>
                             </label>
-                            <input type="text" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+                            <input value="2255" id="pin-number" type="text" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
                             <label class="label">
                                 <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
                         <div class="form-control mt-6">
-                            <button class="btn btn-primary">Login</button>
+                            <button id="login-btn" type="submit" class="btn btn-primary">Login</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        
+    </script>
+    <script src="script/login.js"></script>
 </body>
 
 </html>
