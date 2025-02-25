@@ -1,14 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payoo MFS Main-Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        .outfit-font {
+            font-family: "Outfit", serif;
+        }
+    </style>
 </head>
 
-<body>
-    <h1>Hello World</h1>
+<body class="bg-slate-800 outfit-font">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header class="">
+            <nav class="border-b-2 border-[#0808083a]">
+                <div class="flex justify-between mx-6 mb-3">
+                    <div class="flex gap-2">
+                        <img class="w-[50.56px]" src="asset/Group (1).png" alt="">
+                        <div>
+                            <h1 class="text-lg font-extrabold mb-[6px]">$ 45000</h1>
+                            <p class="text-[#08080880] text-sm">Available Balance</p>
+                        </div>
+                    </div>
+                    <button class="border-2 border-[#0808083a] py-0 px-3 rounded-xl text-[#0808089c] text-sm">Log
+                        Out</button>
+                </div>
+            </nav>
+            <section class="mt-8 mx-6">
+                <div class="mb-14">
+                    <h1 class="text-2xl text-[#080808] font-bold mb-3">🔥 Welcome to Payooo!</h1>
+                    <p class="text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is
+                        low and </p>
+                </div>
+
+                <!-- cards container -->
+                <div class="cards grid grid-cols-3 gap-x-2 gap-y-4">
+                    <!-- box-1 -->
+                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                        <img class="w-8 mx-auto" src="asset/wallet 1.png" alt="">
+                        <h3>Add Money</h3>
+                    </div>
+                    <!-- box-2 -->
+                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                        <img class="w-8 mx-auto" src="asset/send 1.png" alt="">
+                        <h3>Cashout</h3>
+                    </div>
+                    <!-- box-3 -->
+                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                        <img class="w-8 mx-auto" src="asset/purse 1.png" alt="">
+                        <h3>Pay Bill</h3>
+                    </div>
+                    <!-- box-4 -->
+                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                        <img class="w-8 mx-auto" src="asset/money 1.png" alt="">
+                        <h3>Transfer Money</h3>
+                    </div>
+                    <!-- box-5 -->
+                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                        <img class="w-8 mx-auto" src="asset/financial 1.png" alt="">
+                        <h3>Get Bonus</h3>
+                    </div>
+                    <!-- box-6 -->
+                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                        <img class="w-8 mx-auto" src="asset/Group.png" alt="">
+                        <h3>Transactions Histroy</h3>
+                    </div>
+                </div>
+
+                <!-- Add Money section -->
+                <section class="mt-8">
+                   <h1 class="text-[#080808] text-lg font-semibold mb-4">Add Money</h1>
+
+                   <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <legend>Select A Bank</legend>
+                            <select class="select w-full max-w-xs">
+                                <option disabled selected>Select Bank</option>
+                                <option value="Bkash">Bkash</option>
+                                <option value="Nagad">Nagad</option>
+                                <option value="dbbl">DBBL</option>
+                              </select>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Bank Acount Number</span>
+                            </label>
+                            <input type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Amount to Add</span>
+                            </label>
+                            <input type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin Number</span>
+                            </label>
+                            <input type="text" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button type="submit" class="btn btn-primary">Add Money</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+        </header>
+
+    </section>
 </body>
 
 </html>
