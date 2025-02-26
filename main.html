@@ -36,6 +36,7 @@
                         Out</button>
                 </div>
             </nav>
+            <!-- main section -->
             <section class="mt-8 mx-6">
                 <div class="mb-14">
                     <h1 class="text-2xl text-[#080808] font-bold mb-3">🔥 Welcome to Payooo!</h1>
@@ -46,12 +47,13 @@
                 <!-- cards container -->
                 <div class="cards grid grid-cols-3 gap-x-2 gap-y-4">
                     <!-- box-1 -->
-                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                    <div id="add-money-box"
+                        class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
                         <img class="w-8 mx-auto" src="asset/wallet 1.png" alt="">
                         <h3>Add Money</h3>
                     </div>
                     <!-- box-2 -->
-                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                    <div id="cashout-box" class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
                         <img class="w-8 mx-auto" src="asset/send 1.png" alt="">
                         <h3>Cashout</h3>
                     </div>
@@ -78,15 +80,15 @@
                 </div>
 
                 <!-- Add Money section -->
-                <section class="mt-8">
-                    <h1 class="text-[#080808] text-lg font-semibold mb-4">Add Money</h1>
+                <section id="add-money-section" class="mt-8">
+                    <h1 class="text-[#080808] text-lg font-semibold mb-2 ml-3">Add Money</h1>
 
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
                             <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                                 <form class="card-body">
                                     <legend>Select A Bank</legend>
-                                    <select class="select w-full max-w-xs">
+                                    <select class="select w-full max-w-xs rounded-2xl">
                                         <option disabled selected>Select Bank</option>
                                         <option value="Bkash">Bkash</option>
                                         <option value="Nagad">Nagad</option>
@@ -97,24 +99,65 @@
                                             <span class="label-text">Bank Acount Number</span>
                                         </label>
                                         <input type="number" placeholder="Enter account number"
-                                            class="input input-bordered" required />
+                                            class="input input-bordered rounded-2xl" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Amount to Add</span>
                                         </label>
                                         <input type="text" id="amount" placeholder="Add Amount to withdraw"
-                                            class="input input-bordered" required />
+                                            class="input input-bordered rounded-2xl" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Pin Number</span>
                                         </label>
                                         <input id="pin" type="text" placeholder="Enter 4 digit pin number"
-                                            class="input input-bordered" required />
+                                            class="input input-bordered rounded-2xl" required />
                                     </div>
                                     <div class="form-control mt-6">
-                                        <button id="add-money" type="submit" class="btn btn-primary">Add Money</button>
+                                        <button id="add-money-btn" type="submit" class="btn btn-primary rounded-2xl">Add
+                                            Money</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cashout section -->
+                <section id="cashout" class="mt-8">
+                    <h1 class="text-[#080808] text-lg font-semibold mb-2 ml-3">Cashout</h1>
+
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+                            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Agent Number</span>
+                                        </label>
+                                        <input value="01330624539" id="agent-number" type="number"
+                                            placeholder="Enter 11 digit number" class="input input-bordered rounded-2xl"
+                                            required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Amount</span>
+                                        </label>
+                                        <input type="text" id="cashout-amount" placeholder="Enter Amount to withdraw"
+                                            class="input input-bordered rounded-2xl" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Pin Number</span>
+                                        </label>
+                                        <input id="cashout-pin" type="text" placeholder="Enter 4 digit pin number"
+                                            class="input input-bordered rounded-2xl" required />
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="withdraw-btn" type="submit"
+                                            class="btn btn-primary rounded-2xl">Withdraw Money</button>
                                     </div>
                                 </form>
                             </div>
@@ -131,6 +174,7 @@
     </script>
 
     <script src="script/addMoney.js"></script>
+    <script src="script/toggle.js"></script>
 </body>
 
 </html>
