@@ -22,7 +22,9 @@
 
 <body class="bg-slate-800 outfit-font">
     <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+
         <header class="">
+            <!-- navbar section -->
             <nav class="border-b-2 border-[#0808083a]">
                 <div class="flex justify-between mx-6 mb-3">
                     <div class="flex gap-2">
@@ -53,7 +55,8 @@
                         <h3>Add Money</h3>
                     </div>
                     <!-- box-2 -->
-                    <div id="cashout-box" class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                    <div id="cashout-box"
+                        class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
                         <img class="w-8 mx-auto" src="asset/send 1.png" alt="">
                         <h3>Cashout</h3>
                     </div>
@@ -98,7 +101,7 @@
                                         <label class="label">
                                             <span class="label-text">Bank Acount Number</span>
                                         </label>
-                                        <input type="number" placeholder="Enter account number"
+                                        <input id="account-number" type="number" placeholder="Enter account number"
                                             class="input input-bordered rounded-2xl" required />
                                     </div>
                                     <div class="form-control">
@@ -170,9 +173,10 @@
     </section>
 
     <script>
-        
+
     </script>
 
+    <script src="utilities/utilities.js"></script>
     <script src="script/addMoney.js"></script>
     <script src="script/toggle.js"></script>
     <script src="script/cashout.js"></script>
