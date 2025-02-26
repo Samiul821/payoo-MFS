@@ -28,7 +28,7 @@
                     <div class="flex gap-2">
                         <img class="w-[50.56px]" src="asset/Group (1).png" alt="">
                         <div>
-                            <h1 class="text-lg font-extrabold mb-[6px]">$ 45000</h1>
+                            <h1 class="text-lg font-extrabold mb-[6px]">$ <span id="main-balence">4500</span></h1>
                             <p class="text-[#08080880] text-sm">Available Balance</p>
                         </div>
                     </div>
@@ -79,49 +79,75 @@
 
                 <!-- Add Money section -->
                 <section class="mt-8">
-                   <h1 class="text-[#080808] text-lg font-semibold mb-4">Add Money</h1>
+                    <h1 class="text-[#080808] text-lg font-semibold mb-4">Add Money</h1>
 
-                   <div class="">
-                    <div class="hero-content flex-col lg:flex-row-reverse">
-                      <div class="card w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                            <legend>Select A Bank</legend>
-                            <select class="select w-full max-w-xs">
-                                <option disabled selected>Select Bank</option>
-                                <option value="Bkash">Bkash</option>
-                                <option value="Nagad">Nagad</option>
-                                <option value="dbbl">DBBL</option>
-                              </select>
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Bank Acount Number</span>
-                            </label>
-                            <input type="number" placeholder="Enter account number" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Amount to Add</span>
-                            </label>
-                            <input type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Pin Number</span>
-                            </label>
-                            <input type="text" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control mt-6">
-                            <button type="submit" class="btn btn-primary">Add Money</button>
-                          </div>
-                        </form>
-                      </div>
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+                            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                    <legend>Select A Bank</legend>
+                                    <select class="select w-full max-w-xs">
+                                        <option disabled selected>Select Bank</option>
+                                        <option value="Bkash">Bkash</option>
+                                        <option value="Nagad">Nagad</option>
+                                        <option value="dbbl">DBBL</option>
+                                    </select>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Bank Acount Number</span>
+                                        </label>
+                                        <input type="number" placeholder="Enter account number"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Amount to Add</span>
+                                        </label>
+                                        <input type="text" id="amount" placeholder="Add Amount to withdraw"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Pin Number</span>
+                                        </label>
+                                        <input id="pin" type="text" placeholder="Enter 4 digit pin number"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="add-money" type="submit" class="btn btn-primary">Add Money</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </section>
             </section>
         </header>
 
     </section>
+
+    <script>
+        document.getElementById('add-money')
+            .addEventListener('click', function (event) {
+                event.preventDefault();
+                const amount = document.getElementById('amount').value;
+                const convertedAmount = parseFloat(amount);
+                const pin = document.getElementById("pin").value;
+                const convertedPin = parseInt(pin);
+                const mainBalence = document.getElementById('main-balence').innerText;
+                const convertedMainBalenc = parseFloat(mainBalence);
+
+                if(convertedPin === 2255){
+                    const sum = convertedMainBalenc + convertedAmount;
+                    document.getElementById('main-balence').innerText = sum;
+                }
+                else{
+                    alert('pin sotik na');
+                }
+            })
+    </script>
+
+    <script src="script/addMoney.js"></script>
 </body>
 
 </html>
