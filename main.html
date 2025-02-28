@@ -76,9 +76,10 @@
                         <h3>Get Bonus</h3>
                     </div>
                     <!-- box-6 -->
-                    <div class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
+                    <div id="transaction-box"
+                        class="box cursor-pointer border-2 text-center p-4 border-[rgba(8,8,8,0.10)] rounded-xl">
                         <img class="w-8 mx-auto" src="asset/Group.png" alt="">
-                        <h3>Transactions Histroy</h3>
+                        <h3>Transactions</h3>
                     </div>
                 </div>
 
@@ -91,10 +92,10 @@
                             <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                                 <form class="card-body">
                                     <legend>Select A Bank</legend>
-                                    <select class="select w-full max-w-xs rounded-2xl">
+                                    <select id="allbank" class="select w-full max-w-xs rounded-2xl">
                                         <option disabled selected>Select Bank</option>
-                                        <option value="Bkash">Bkash</option>
-                                        <option value="Nagad">Nagad</option>
+                                        <option value="Bkash">bkash</option>
+                                        <option value="Nagad">nagad</option>
                                         <option value="dbbl">DBBL</option>
                                     </select>
                                     <div class="form-control">
@@ -167,19 +168,25 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Transactions section -->
+                <section id="transactions" class="mt-8">
+                    <h1 class="text-2xl text-center font-semibold text-[#080808] mb-4">Transaction History</h1>
+                    <!-- transactions container -->
+                    <div id="transactions-container">
+
+                    </div>
+                </section>
             </section>
         </header>
 
     </section>
 
-    <script>
-
-    </script>
-
     <script src="utilities/utilities.js"></script>
     <script src="script/addMoney.js"></script>
     <script src="script/toggle.js"></script>
     <script src="script/cashout.js"></script>
+    <script src="script/tansaction.js"></script>
 </body>
 
 </html>

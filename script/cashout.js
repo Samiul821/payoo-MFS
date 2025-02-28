@@ -26,10 +26,22 @@ document
     const pinNumber = getInputValueId("cashout-pin");
     const mainBalence = getInnerTextId("main-balence");
 
+    if (amount > mainBalence) {
+      alert("invalid amount");
+      return;
+    }
+
     if (agentNumber.length === 11) {
       if (pinNumber === 2255) {
         const sum = mainBalence - amount;
         setInnerTextByIdandValue("main-balence", sum);
+
+        const contanier = document.getElementById("transactions-container");
+        const p = document.createElement("p");
+        p.innerText = `
+        cashout ${amount} Taka from this ${agentNumber} agent
+        `;
+        contanier.appendChild(p);
       } else {
         alert("pin number not valid");
       }
